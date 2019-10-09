@@ -1,12 +1,13 @@
-module Test.Expectations (
-  shouldBeLessThan,
-  shouldBeLessThanOrEqual,
-  shouldBeGreaterThan,
-  shouldBeGreaterThanOrEqual
-  ) where
+module Test.Expectations
+  ( shouldBeLessThan,
+    shouldBeLessThanOrEqual,
+    shouldBeGreaterThan,
+    shouldBeGreaterThanOrEqual,
+  )
+where
 
-import           Control.Monad (unless)
-import           Test.Hspec
+import Control.Monad (unless)
+import Test.Hspec
 
 expectTrue :: String -> Bool -> Expectation
 expectTrue msg b = unless b (expectationFailure msg)
